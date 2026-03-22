@@ -9,8 +9,8 @@
 </head>
 
 <body>
-
     <header>
+        <button id="arriba">↑</button>
         <aside>
             <a href="index.html" aria-current="page">
                 <h1>Estudio Vazio</h1>
@@ -21,49 +21,12 @@
                 <a href="cronologiaZelda.html">Cronología de The Legend of Zelda</a>
                 <a href="guiaDeConsolasRetro.html">Comparación de Consolas Retro</a>
                 <a href="contacto.html">Contacto</a>
+                <button id="modo" onclick="cambiarModo()">Modo Oscuro</button>
             </nav>
         </aside>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>estudio vazio</title>
     </header>
 
-    <main>
-        <section>
-            <h2>
-                Cronología de The Legend of Zelda
-            </h2>
-            <p>
-                The Legend of Zelda (Zeruda no Densetsu?, tdl. «La leyenda de Zelda») es una serie de videojuegos de
-                acción-aventura creada por los diseñadores japoneses Shigeru Miyamoto y Takashi Tezuka, y desarrollada por
-                Nintendo, empresa que también se encarga de su distribución internacional. Su trama por lo general describe
-                las heroicas aventuras del joven guerrero Link, que debe enfrentarse a peligros y resolver acertijos para
-                ayudar a la Princesa Zelda a derrotar a Ganondorf y salvar su hogar, el reino de Hyrule.
-            </p>
-            <p>
-                A partir del lanzamiento del primer juego en 1986, The Legend of Zelda ha logrado una notable popularidad
-                acompañada de críticas favorables en la industria de los videojuegos. Como se menciona en la obra oficial de
-                Nintendo,
-                <q>la historia de Hyrule está destinada a repetirse mientras existan el valor, la sabiduría y el poder</q>,
-                concepto central en la narrativa de la saga.
-            </p>
-    
-            <blockquote cite="https://www.amazon.com.mx/Legend-Zelda-Hyrule-Historia/dp/1616550414">
-                <p>
-                    La cronología de The Legend of Zelda no sigue una línea temporal única, sino que se divide en tres
-                    realidades
-                    distintas a partir de los acontecimientos de Ocarina of Time. Estas líneas representan las posibles
-                    consecuencias
-                    del éxito o fracaso del héroe, así como las decisiones tomadas a lo largo del tiempo.
-                </p>
-                <cite>The Legend of Zelda: Hyrule Historia, Nintendo (2011)</cite>
-            </blockquote>
-    
-            <figure>
-                <img src="ZeldaRecursos\Imagenes\fondo.jpg" alt="fondo" height="500">
-            </figure>
-        </section>
-
+    <main class="zelda">
         <!-- ÍNDICE DE LA PÁGINA -->
         <nav aria-labelledby="tocTitle">
             <p id="tocTitle"><strong>ÍNDICE</strong></p>
@@ -78,7 +41,7 @@
                         Hyrule</a></li>
             </ul>
 
-            <h3>Videojuegos por cada Era</h3>
+            <h3>Videojuegos por Era</h3>
             <ul>
                 <li><a href="#primerasEras">Primeras Eras</a></li>
                 <ol>
@@ -113,6 +76,40 @@
             </ul>
         </nav>
 
+        <section>
+            <h2>
+                Cronología de The Legend of Zelda
+            </h2>
+            <p>
+                The Legend of Zelda (Zeruda no Densetsu?, tdl. «La leyenda de Zelda») es una serie de videojuegos de
+                acción-aventura creada por los diseñadores japoneses Shigeru Miyamoto y Takashi Tezuka, y desarrollada por
+                Nintendo, empresa que también se encarga de su distribución internacional. Su trama por lo general describe
+                las heroicas aventuras del joven guerrero Link, que debe enfrentarse a peligros y resolver acertijos para
+                ayudar a la Princesa Zelda a derrotar a Ganondorf y salvar su hogar, el reino de Hyrule.
+            </p>
+            <p>
+                A partir del lanzamiento del primer juego en 1986, The Legend of Zelda ha logrado una notable popularidad
+                acompañada de críticas favorables en la industria de los videojuegos. Como se menciona en la obra oficial de
+                Nintendo,
+                <q>la historia de Hyrule está destinada a repetirse mientras existan el valor, la sabiduría y el poder</q>,
+                concepto central en la narrativa de la saga.
+            </p>
+    
+            <blockquote cite="https://www.amazon.com.mx/Legend-Zelda-Hyrule-Historia/dp/1616550414">
+                <p>
+                    La cronología de The Legend of Zelda no sigue una línea temporal única, sino que se divide en tres
+                    realidades
+                    distintas a partir de los acontecimientos de Ocarina of Time. Estas líneas representan las posibles
+                    consecuencias
+                    del éxito o fracaso del héroe, así como las decisiones tomadas a lo largo del tiempo.
+                </p>
+                <cite>The Legend of Zelda: Hyrule Historia, Nintendo (2011)</cite>
+            </blockquote>
+    
+            <figure id="miniaturas">
+                <img src="ZeldaRecursos\Videos\miniaturas\linksAwakening.jpg" alt="fondo" height="300">
+            </figure>
+        </section>
         <hr>
         <section id="primerasEras">
             <h2>Primeras Eras</h2>
@@ -503,6 +500,7 @@
 
         <p>&copy; 2026 Estudio Vazio | Todos los derechos reservados</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

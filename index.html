@@ -11,6 +11,7 @@
 
 <body>
     <header>
+        <button id="arriba">↑</button>
         <aside>
             <a href="index.html" aria-current="page"><h1>Estudio Vazio</h1></a>
             <!-- NAVEGACIÓN GLOBAL -->
@@ -19,6 +20,7 @@
                 <a href="cronologiaZelda.html">Cronología de The Legend of Zelda</a>
                 <a href="guiaDeConsolasRetro.html">Comparación de Consolas Retro</a>
                 <a href="contacto.html">Contacto</a>
+                <button id="modo" onclick="cambiarModo()">Modo Oscuro</button>
             </nav>
         </aside>
     </header>
@@ -26,10 +28,13 @@
     <main>
         <section class="cartas">
             <a href=cronologiaZelda.html class="card"><h3>Cronología de The Legend of Zelda</h3>
-            <img src="ZeldaRecursos\Imagenes\titulo.jpg" alt="Cronología de The Legend of Zelda" height="200"></a>
+            <img src="Imagenes/zelda.jpg" alt="Cronología de The Legend of Zelda" height="200"></a>
                 
-            <a href=guiaDeConsolasRetro.html class="card"><h3>Guías</h3>
-            <img src="Imagenes\guiaDeConsolasRetro.jpg" alt="Guía de Consolas Retro" height="200"></a>
+            <a href=guiaDeConsolasRetro.html class="card"><h3>Guía de Consolas Retro</h3>
+            <img src="Imagenes/consolasRetro.jpg" alt="Guía de Consolas Retro" height="200"></a>
+
+            <a href=contacto.html class="card"><h3>Contacto</h3>
+            <img src="Imagenes/contacto.jpg" alt="Guía de Consolas Retro" height="200"></a>
         </section>
         <hr>
 
@@ -60,6 +65,7 @@
 
         <p>&copy; 2026 Estudio Vazio | Todos los derechos reservados</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

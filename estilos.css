@@ -5,6 +5,7 @@ VARIABLES DE COLOR
 :root {
     --bg: #eef6f2;
     --bg-sec: #dceee6;
+    --bg-header: #397670;
 
     --primario: #4fae74;
     --secundario: #2c8f8f;
@@ -13,17 +14,16 @@ VARIABLES DE COLOR
     --borde: #b8d2c7;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #0f2e2b;
-        --bg-sec: #123a34;
+.oscuro {
+    --bg: #0f2e2b;
+    --bg-sec: #123a34;
+    --bg-header: #133935;
 
-        --primario: #5cc28a;
-        --secundario: #3fa5a5;
+    --primario: #5cc28a;
+    --secundario: #3fa5a5;
 
-        --texto: #e9f5f0;
-        --borde: #214c45;
-    }
+    --texto: #e9f5f0;
+    --borde: #214c45;
 }
 
 * {
@@ -39,12 +39,22 @@ body {
     line-height: 1.6;
 }
 
+.zelda {
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+
+    section, hr {
+        grid-column: 2;
+    }
+}
+
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--bg-sec);
+    background: var(--bg-header);
     border-bottom: 2px solid var(--borde);
     z-index: 1000;
 }
@@ -72,10 +82,6 @@ header nav {
     gap: 25px;
 }
 
-nav {
-    margin-left: 180px;
-}
-
 nav a {
     text-decoration: none;
     color: var(--texto);
@@ -87,13 +93,21 @@ nav a:hover {
     text-decoration: none;
 }
 
+nav[aria-labelledby="tocTitle"] {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-bottom: -1000px;
+    grid-column: 1;
+    top: 80px;
+}
+
 main {
-    padding-top: 80px
+    padding-top: 80px;
 }
 
 section {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-top: 30px;
     margin-bottom: 30px;
     background-color: var(--bg-sec);
@@ -102,7 +116,10 @@ section {
 }
 
 hr {
-    margin: 80px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
 figure img {
@@ -182,9 +199,12 @@ caption {
 
 th,
 td {
-    border: 1px solid var(--borde);
+    border: 2px solid var(--borde);
     padding: 5px;
     text-align: center;
+    img {
+        height: 150px;
+    }
 }
 
 th {
@@ -221,6 +241,9 @@ textarea,
 select {
     padding: 8px;
     margin-top: 5px;
+    background: var(--bg-sec);
+    color: var(--texto);
+    border-radius: 10px;
 }
 
 button {
@@ -229,10 +252,21 @@ button {
     color: var(--texto);
     border: none;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 button:hover {
     background: var(--secundario);
+}
+
+#arriba {
+    position:fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#modo {
+    width: 130px;
 }
 
 main .cartas:first-of-type {
@@ -240,6 +274,8 @@ main .cartas:first-of-type {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     justify-items: center;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 .card {
@@ -266,3 +302,18 @@ main .cartas:first-of-type {
     margin-top: 10px;
     border-radius: 6px;
 }
+
+#miniaturas {
+    text-align: center;
+}
+
+.imagenPrincipal {
+    text-align: center;
+    margin:0;
+
+    #principal {
+        height: 500px;
+        margin: 0;
+    }
+}
+

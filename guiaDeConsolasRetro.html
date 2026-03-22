@@ -10,6 +10,7 @@
 
 <body>
     <header>
+        <button id="arriba">↑</button>
         <aside>
             <a href="index.html" aria-current="page">
                 <h1>Estudio Vazio</h1>
@@ -20,6 +21,7 @@
                 <a href="cronologiaZelda.html">Cronología de The Legend of Zelda</a>
                 <a href="guiaDeConsolasRetro.html">Comparación de Consolas Retro</a>
                 <a href="contacto.html">Contacto</a>
+                <button id="modo" onclick="cambiarModo()">Modo Oscuro</button>
             </nav>
         </aside>
     </header>
@@ -36,6 +38,10 @@
             </p>
         </section>
         <section class="tabla">
+            <figure class="imagenPrincipal">
+                <h2 id="nombreConsola">AYN Thor</h2>
+                <img src="Imagenes/ConsolasRetro/big-thor.jpg" id="principal" alt="Principal">
+            </figure>
             <table>
                 <caption>Comparación de Consolas Retro Emuladoras</caption>
                 <thead>
@@ -76,51 +82,56 @@
 
                         <!--AYN Thor-->
                         <td headers="imagen ayn thor" colspan="4">
-                            <div style="display: flex; justify-content: center;">
-                                <a href="https://www.ayntec.com/products/ayn-thor" target="_blank">
-                                    <img src="Imagenes/ConsolasRetro/thor.jpg" alt="AYN Thor" height="150">
-                                </a>
+                            <div>
+                                <img src="Imagenes/ConsolasRetro/thor.jpg" alt="AYN Thor" 
+                                    data-grande="Imagenes/ConsolasRetro/big-thor.jpg" 
+                                    data-nombre="AYN Thor"
+                                    onclick="cambiar(this)">
                             </div>
                         </td>
                         <!--AYN Odin 3-->
                         <td headers="imagen ayn odin3" colspan="4">
-                            <div style="display: flex; justify-content: center;">
-                                <a href="https://www.ayntec.com/products/ayn-odin-3" target="_blank">
-                                    <img src="Imagenes/ConsolasRetro/odin3.jpg" alt="AYN Odin 3" height="150">
-                                </a>
+                            <div>
+                                <img src="Imagenes/ConsolasRetro/odin3.jpg" alt="AYN Odin 3" 
+                                    data-grande="Imagenes/ConsolasRetro/big-odin3.jpg" 
+                                    data-nombre="AYN Odin 3"
+                                    onclick="cambiar(this)">
                             </div>
                         </td>
                         <!--Retroid Pocket 6-->
                         <td headers="imagen retroid pocket6" colspan="2">
-                            <div style="display: flex; justify-content: center;">
-                                <a href="https://www.goretroid.com/collections/frontpage/products/retroid-pocket-6-handheld"
-                                    target="_blank">
-                                    <img src="Imagenes/ConsolasRetro/pocket6.jpg" alt="Retroid Pocket 6" height="150">
-                                </a>
+                            <div>
+                                <img src="Imagenes/ConsolasRetro/pocket6.jpg" alt="Retroid Pocket 6" 
+                                    data-grande="Imagenes/ConsolasRetro/big-pocket6.jpg" 
+                                    data-nombre="Retroid Pocket 6"
+                                    onclick="cambiar(this)">
                             </div>
                         </td>
                         <!--Retroid Flip 2-->
                         <td headers="imagen retroid flip2" colspan="2">
-                            <div style="display: flex; justify-content: center;">
-                                <a href="https://www.goretroid.com/products/retroid-pocket-flip-2" target="_blank">
-                                    <img src="Imagenes/ConsolasRetro/flip2.jpg" alt="Retroid Flip 2" height="150">
-                                </a>
+                            <div>
+                                <img src="Imagenes/ConsolasRetro/flip2.jpg" alt="Retroid Flip 2" 
+                                    data-grande="Imagenes/ConsolasRetro/big-flip2.jpg" 
+                                    data-nombre="Retroid Flip 2"
+                                    onclick="cambiar(this)">
                             </div>
                         </td>
                         <!--Anbernic RG DS-->
                         <td headers="imagen anbernic rgds">
-                            <div style="display: flex; justify-content: center;">
-                                <a href="https://anbernic.com/es-es/products/rgds" target="_blank">
-                                    <img src="Imagenes/ConsolasRetro/rgds.jpg" alt="Anbernic RG DS" height="150">
-                                </a>
+                            <div>
+                                <img src="Imagenes/ConsolasRetro/rgds.jpg" alt="Anbernic RG DS" 
+                                    data-grande="Imagenes/ConsolasRetro/big-rgds.jpg" 
+                                    data-nombre="Anbernic RG DS"
+                                    onclick="cambiar(this)">
                             </div>
                         </td>
                         <!--R36S-->
                         <td headers="imagen generico r36s">
-                            <div style="display: flex; justify-content: center;">
-                                <a href="https://consolar36s.com" target="_blank">
-                                    <img src="Imagenes/ConsolasRetro/r36s.jpg" alt="R36S" height="150">
-                                </a>
+                            <div>
+                                <img src="Imagenes/ConsolasRetro/r36s.jpg" alt="R36S" 
+                                    data-grande="Imagenes/ConsolasRetro/big-r36s.jpg" 
+                                    data-nombre="R36S"
+                                    onclick="cambiar(this)">
                             </div>
                         </td>
                     </tr>
@@ -170,16 +181,16 @@
 
                         <!--AYN Thor-->
                         <td headers="precio ayn thor">$259</td>
-                        <td headers="precio ayn thor">$309</td>
-                        <td headers="precio ayn thor">$369</td>
-                        <td headers="precio ayn thor">$459</td>
+                        <td headers="precio ayn thor">$319</td>
+                        <td headers="precio ayn thor">$399</td>
+                        <td headers="precio ayn thor">$489</td>
                         <!--AYN Odin 3-->
-                        <td headers="precio ayn odin3">$329</td>
-                        <td headers="precio ayn odin3">$399</td>
-                        <td headers="precio ayn odin3">$449</td>
+                        <td headers="precio ayn odin3">$339</td>
+                        <td headers="precio ayn odin3">$439</td>
+                        <td headers="precio ayn odin3">$489</td>
                         <td headers="precio ayn odin3">$519</td>
                         <!--Retroid Pocket 6-->
-                        <td headers="precio retroid pocket6">$229</td>
+                        <td headers="precio retroid pocket6">$244</td>
                         <td headers="precio retroid pocket6">$279</td>
                         <!--Retroid Flip 2-->
                         <td headers="precio retroid flip2">$179</td>
@@ -454,6 +465,7 @@
 
         <p>&copy; 2026 Estudio Vazio | Todos los derechos reservados</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
